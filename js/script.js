@@ -1,10 +1,11 @@
 
 function playGame (playerInput){
-clearMessages();
+	clearMessages();
+
 	function printMessage(msg){
-		var div = document.createElement('div');
-		div.innerHTML = msg;
-		document.getElementById('messages').appendChild(div);
+			var div = document.createElement('div');
+			div.innerHTML = msg;
+			document.getElementById('messages').appendChild(div);
 	}
 
 	function clearMessages(){
@@ -54,13 +55,13 @@ clearMessages();
 	}
 
 	printMessage (displayResult(argComputerMove, argPlayerMove));
-};
-document.getElementById('rock').addEventListener('click', function(){
+	};
+	document.getElementById('rock').addEventListener('click', function(){
 	playGame(1);
-});
-document.getElementById('paper').addEventListener('click', function(){
+	});
+	document.getElementById('paper').addEventListener('click', function(){
 	playGame(2);
-});
-document.getElementById('scissors').addEventListener('click', function (){
+	});
+	document.getElementById('scissors').addEventListener('click', function (){
 	playGame(3);
-});
+	});
