@@ -1,0 +1,51 @@
+/*global*/
+::before, *::after {
+    box-sizing: border-box;  
+}
+body {
+    width:100%;
+    height:auto;
+    margin: 0;
+    padding: 0;
+    background: lightgrey;
+}
+
+/*header*/
+
+header {
+    width:100%;
+    height: auto;
+    background-color: black;
+    text-align: center;
+    
+    img {
+        width:80%;
+        object-fit: cover;
+    }
+}
+
+/*content*/
+
+.container {
+    margin: 100px auto;
+    text-align: center;
+    h1 {
+        padding-bottom: 30px;
+    }
+     img {
+        width:150px;
+        height: auto;
+        margin: 0 15px;
+        border-radius: 20px;
+        box-shadow: 10px 10px 20px 8px;
+    }
+
+    #messages {
+        font-size:24px;
+        padding-top: 40px; 
+        font-weight: bold;
+        font-style: italic;
+        color: blueviolet;
+    }
+}
+
