@@ -1,8 +1,8 @@
-
-function playGame (playerInput){
+const playGame = function (playerInput)
+{ 
 	clearMessages();
 
-	function printMessage(msg){
+	const printMessage = function(msg){
 			var div = document.createElement('div');
 			div.innerHTML = msg;
 			document.getElementById('messages').appendChild(div);
@@ -12,7 +12,7 @@ function playGame (playerInput){
 		document.getElementById('messages').innerHTML = '';
 	}
 
-	function getMoveName(argMoveId){
+	const getMoveName = function (argMoveId){
 		if(argMoveId == 1){
 		return 'kamień';
 		}
@@ -28,15 +28,15 @@ function playGame (playerInput){
 		}
 	}
 
-	let randomNumber = Math.floor(Math.random() * 3 + 1);
+	const randomNumber = Math.floor(Math.random() * 3 + 1);
 
-	let argComputerMove = getMoveName(randomNumber) ;
+	const argComputerMove = getMoveName(randomNumber) ;
 
-	let argPlayerMove = getMoveName(playerInput);
+	const argPlayerMove = getMoveName(playerInput);
 
 	console.log('moves:', argComputerMove, argPlayerMove);
 
-	function displayResult(argComputerMove, argPlayerMove){
+	const displayResult = function (argComputerMove, argPlayerMove){
 		printMessage ('Zagrałem ' + argComputerMove + ', Twój wybór to: ' + argPlayerMove);
 
 		if ( argComputerMove === argPlayerMove) {
@@ -56,12 +56,17 @@ function playGame (playerInput){
 
 	printMessage (displayResult(argComputerMove, argPlayerMove));
 	};
-	document.getElementById('rock').addEventListener('click', function(){
+
+	const rock = document.getElementById('rock');{
+	rock.addEventListener('click', function(){
 	playGame(1);
+	});};
+	const paper = document.getElementById('paper');{
+		paper.addEventListener('click', function(){
+		playGame(2);
+	});};
+	const scissors = document.getElementById('scissors');{
+		scissors.addEventListener('click', function(){
+		playGame(3);
 	});
-	document.getElementById('paper').addEventListener('click', function(){
-	playGame(2);
-	});
-	document.getElementById('scissors').addEventListener('click', function (){
-	playGame(3);
-	});
+}
