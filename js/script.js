@@ -1,6 +1,5 @@
 const playGame = function (playerInput)
 { 
-	
 	clearMessages();
 
 	const printMessage = function(msg){
@@ -23,7 +22,6 @@ const playGame = function (playerInput)
 		else if(argMoveId == 3){
 		return 'nożyce';
 		}
-
 	}
 
 	const randomNumber = Math.floor(Math.random() * 3 + 1);
