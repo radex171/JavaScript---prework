@@ -1,11 +1,12 @@
 const playGame = function (playerInput)
 { 
+	
 	clearMessages();
 
 	const printMessage = function(msg){
-			var div = document.createElement('div');
-			div.innerHTML = msg;
-			document.getElementById('messages').appendChild(div);
+		const div = document.createElement('div');
+		div.innerHTML = msg;
+		document.getElementById('messages').appendChild(div);
 	}
 
 	function clearMessages(){
@@ -22,10 +23,7 @@ const playGame = function (playerInput)
 		else if(argMoveId == 3){
 		return 'nożyce';
 		}
-		else {
-		printMessage('Nie znam ruchu o id ' + argMoveId + '.');
-		return 'nieznany ruch';
-		}
+
 	}
 
 	const randomNumber = Math.floor(Math.random() * 3 + 1);
@@ -44,9 +42,9 @@ const playGame = function (playerInput)
 		}
 
 		else if (( argComputerMove ==='nożyce' && argPlayerMove === 'kamień') ||
-		( argComputerMove ==='papier' && argPlayerMove === 'nożyce') ||
-		( argComputerMove ==='kamień' && argPlayerMove === 'papier')) {
-			return 'wygrałeś!';
+				 ( argComputerMove ==='papier' && argPlayerMove === 'nożyce') ||
+				 ( argComputerMove ==='kamień' && argPlayerMove === 'papier')) {
+				 return 'wygrałeś!';
 		}
 
 		else {
@@ -55,18 +53,24 @@ const playGame = function (playerInput)
 	}
 
 	printMessage (displayResult(argComputerMove, argPlayerMove));
-	};
+}
 
-	const rock = document.getElementById('rock');{
+const rock = document.getElementById('rock');{
 	rock.addEventListener('click', function(){
-	playGame(1);
-	});};
-	const paper = document.getElementById('paper');{
-		paper.addEventListener('click', function(){
+		playGame(1);
+		}
+	);
+};
+	
+const paper = document.getElementById('paper');{
+	paper.addEventListener('click', function(){
 		playGame(2);
-	});};
-	const scissors = document.getElementById('scissors');{
-		scissors.addEventListener('click', function(){
+		}
+	);
+};
+const scissors = document.getElementById('scissors');{
+	scissors.addEventListener('click', function(){
 		playGame(3);
-	});
+		}
+	);
 }
